@@ -1,19 +1,22 @@
 #include <unistd.h>
 
-void	putchar(char c)
+void	ft_putchar(char c)
 {
 	write (1, &c, 1);
 }
 
-void	alphabet_recursive(int ar)
+void	ft_alphabet_recursive(int ar)
 {
-	putchar(ar);
+	ft_putchar(ar);
 	if ( ar < 91)
-		alphabet_recursibe(ar + 1);
+		ft_alphabet_recursive(ar + 1);
 }
 
 int		main(void)
 {
-	alphabet_recursive(64);
+	int i;
+
+	i = 65;
+	ft_alphabet_recursive(i);
 	return (0);
 }
