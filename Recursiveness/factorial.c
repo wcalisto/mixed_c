@@ -8,12 +8,10 @@ int		factorial(int f)
 		return(f * factorial(f - 1));
 }
 
-int		main(void)
+int		main(int argc, char **argv)
 {
-		int f;
-
-		f = 3;
-		printf("Fatorial de %d = %d \n", f, factorial(f));
-		return(0);
+		int i;
+		i = argv[1] - '0';
+		printf("Fatorial de %d = %d \n", argv[1], factorial(i);
 	
 }
