@@ -5,16 +5,15 @@ void	putchar(char c)
 	write (1, &c, 1);
 }
 
-int		alphabet_recursive(int ar)
+void	alphabet_recursive(int ar)
 {
-	int i;
-
-	i = 40;
-	putchar(i + alphabet_recursive +1);
+	putchar(ar);
+	if ( ar < 91)
+		alphabet_recursibe(ar + 1);
 }
 
 int		main(void)
 {
-	alphabet_recursive();
+	alphabet_recursive(64);
 	return (0);
 }
