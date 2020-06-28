@@ -11,9 +11,9 @@ int		main(int argc, char **argv)
 		(void) argc;
 
 		char *c;
-		int i;
+		int **i;
 
 		c = argv[1];
 		i = c - '0';
-		printf("Fatorial de %d = %d \n", c, factorial(i));
+		printf("Fatorial de %d = %d \n", c, factorial(&i));
 }
