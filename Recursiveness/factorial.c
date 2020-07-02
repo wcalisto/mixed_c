@@ -1,19 +1,27 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int		factorial(int f)
+void	ft_putchar(char c)
 {
-	if ( f >= 0)
-		return(f * factorial(f - 1));
+	write (1, &c, 1);
 }
 
-int		main(int argc, char **argv)
+void	factorial(int f)
 {
-		(void) argc;
+	int x;
 
-		char *c;
-		int **i;
-
-		c = argv[1];
-		i = c - '0';
-		printf("Fatorial de %d = %d \n", c, factorial(&i));
+	ft_putchar(48+f);
+	ft_putchar('.');
+	x = f - 1;
+	if (x >= 0)
+	{
+		factorial(f * x);
+	}
 }
+
+int		main(void)
+{
+	factorial(3);
+	return (0);
+}
+
+
